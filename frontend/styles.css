@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inde{
+    text-decoration: none; 
+}
+
+.title{
+    color: #f3f4f6;
+    border-width: 1%; 
+    padding: 0.1%;
+    margin: 2%;
+    cursor: pointer;
+}
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.input-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;  
+}
+/*!imput*/
+#input{
+    border: none;
+    outline: none;
+    color: #ffffff;
+    border-bottom: solid #ffffff 1px;
+    width: 240%;
+   
+}
+/*!Boton*/
+#button{
+    background-color: #5865f2 ;
+    width: 100px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ffffff;
+    border-width: 2px;
+    transition: background-color 0.3s;
+}
+
+#button:hover{
+    background-color: #4752c4;
+}
+.error{display: none;}
+.errorLink{ display: none;}
+.error2{
+    color: #FF0000;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+}
+
+@media (max-width: 396px) {
+  #input {
+    width: 100%; 
+    border: none;
+    outline: none;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    font-size: 14px; 
+    padding: 8px 4px; 
+    box-sizing: border-box; 
+  }
+  .title{
+    font-size: 25px;
+}
+}
+
