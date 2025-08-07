@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #121212;
+    font-family: "Roboto Mono", monospace;
+    color: #e4e4e4;
+}
+
+/* Logo y encabezado */
+.cja {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.inde {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.title {
+    font-family: "DM Serif Text", serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.title:hover {
+    color: #ccc;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    /* mejor adaptación al alto */
+    padding: 1rem;
+}
+
+/* Formulario */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+    background-color: rgba(61, 50, 50, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Input */
+#input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 8px 4px;
+    transition: border-color 0.3s;
+}
+
+#input:focus {
+    border-color: #5865f2;
+    outline: none;
+}
+
+/* Botón */
+
+.ButtonDesactivado {
+    background-color: #3a3a3a;
+    /* gris oscuro */
+    color: #aaa;
+    /* texto gris claro */
+    cursor: not-allowed;
+    /* cursor deshabilitado */
+    opacity: 0.6;
+    /* apariencia atenuada */
+    border: none;
+    transition: background-color 0.3s, opacity 0.3s;
+    box-shadow: none;
+}
+
+#button {
+    background-color: #5865f2;
+    width: 120px;
+    height: 38px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+    /* Agregado para el tooltip */
+}
+
+#button:hover {
+    background-color: #4752c4;
+    transform: scale(1.05);
+}
+
+/* Tooltip */
+.ButtonMensaje::after {
+    content: "Rellene el campo para activar el botón";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    pointer-events: none;
+    z-index: 1000;
+    margin-bottom: 5px;
+}
+
+/* Flecha del tooltip */
+.ButtonMensaje::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.ButtonMensaje:hover::after,
+.ButtonMensaje:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Errores */
+.error,
+.errorLink {
+    display: none;
+}
+
+.error2 {
+    display: flex;
+    font-size: 14px;
+    color: #ff4d4d;
+    background-color: rgba(255, 77, 77, 0.1);
+    border: 1px solid #ff4d4d;
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    max-width: 300px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .input-container {
+        padding: 3rem 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    #button {
+        width: 100%;
+        max-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cja {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .input-container {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    #input {
+        font-size: 0.95rem;
+    }
+
+    #button {
+        font-size: 16px;
+    }
+}

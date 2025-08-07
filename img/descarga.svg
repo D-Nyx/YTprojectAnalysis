@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" rx="12" fill="#0D1B2A"></rect> <!-- Azul oscuro -->
+  <path d="M22 20L22 44" stroke="#FFD700" stroke-width="4" stroke-linecap="round"></path>
+  <path d="M32 28L32 44" stroke="#FFD700" stroke-width="4" stroke-linecap="round"></path>
+  <path d="M42 36L42 44" stroke="#FFD700" stroke-width="4" stroke-linecap="round"></path>
+  <polygon points="26,16 46,32 26,48" fill="#FFD700"></polygon> <!-- símbolo de "play" -->
+</svg>

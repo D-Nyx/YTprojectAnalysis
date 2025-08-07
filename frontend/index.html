@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Analiza videos de YouTube y obtén estadísticas como vistas, ingresos y más.">
+    <meta name="keywords" content="YouTube, estadísticas, análisis, API, videos">
+    <meta name="author" content="D-Nyx">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="/img/icono.png">
+
+    
     <title>YTProjecanlysis</title>
 </head>
+
 <body>
-   <a href="index.html" class="inde"> <h1 class="title" >YT Projecanlysis</h1></a>
+
+    <div class="cja">
+        <a href="index.html" class="inde">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                <path fill="#FF3D00"
+                    d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z">
+                </path>
+                <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
+            </svg>
+            <h1 class="title">YTProjecanlysis</h1>
+        </a>
+    </div>
     <div class="container">
         <div class="input-container">
             <input type="text" id="input" placeholder="Ingrese el link del video">
-            
+
             <p class="error">Lo siento, tienes que agregar un link para poder enviarlo
             <p class="errorLink"> agrega un link valido </p>
-                
+
             </p>
-            <button id="button">Analizar</button>
+            <button id="button" class="ButtonDesactivado ButtonMensaje" >Analizar</button>
         </div>
     </div>
     <script src="scritp.js"></script>
 </body>
+
 </html>
