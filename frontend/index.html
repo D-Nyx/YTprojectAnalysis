@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="description" content="Analiza videos de YouTube y obtén estadísticas como vistas, ingresos y más.">
     <meta name="keywords" content="YouTube, estadísticas, análisis, API, videos">
     <meta name="author" content="D-Nyx">
@@ -32,10 +34,14 @@
         <div class="input-container">
             <input type="text" id="input" placeholder="Ingrese el link del video">
 
-            <p class="error">Lo siento, tienes que agregar un link para poder enviarlo
             <p class="errorLink"> agrega un link valido </p>
+           <p class="CargandoElMensajeDeEsperaDesactivado">
+            <i class="fa-duotone fa-solid fa-spinner"></i>
+            cargando
+           </p>
 
-            </p>
+
+          
             <button id="button" class="ButtonDesactivado ButtonMensaje" >Analizar</button>
         </div>
     </div>

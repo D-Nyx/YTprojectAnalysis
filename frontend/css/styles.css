@@ -177,43 +177,34 @@
     max-width: 300px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .input-container {
-        padding: 3rem 1.5rem;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-
-    #button {
-        width: 100%;
-        max-width: 140px;
-    }
+.CargandoElMensajeDeEsperaDesactivado{
+display: none;
 }
 
-@media (max-width: 480px) {
-    .cja {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .title {
-        font-size: 1.3rem;
-    }
-
-    .input-container {
-        width: 100%;
-        padding: 2rem 1rem;
-    }
-
-    #input {
-        font-size: 0.95rem;
-    }
-
-    #button {
-        font-size: 16px;
-    }
+.CargandoElMensajeDeEspera {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #00ff00; /* Texto verde claro */
+    font-size: 1rem;
+    font-family: sans-serif;
+    margin-top: 10px;
+    background-color: rgba(0, 128, 0, 0.15); /* Fondo verde suave */
+    border: 1px solid #00ff00; /* Borde verde brillante */
+    padding: 6px 12px;
+    border-radius: 6px;
 }
+
+/* Icono giratorio */
+.CargandoElMensajeDeEspera i {
+    font-size: 1.1rem;
+    animation: spin 1s linear infinite;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+
